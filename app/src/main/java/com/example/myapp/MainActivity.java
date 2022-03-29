@@ -179,6 +179,14 @@ public class MainActivity extends AppCompatActivity {
                 inputTxt.setText(data + "×");
             }
         });
+        btn_equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                data = inputTxt.getText().toString();
+
+                data=data.replaceAll("×","*");
+                data=data.replaceAll("%","/100");
+                data=data.replaceAll("÷","/");
 
 
 
