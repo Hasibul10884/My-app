@@ -132,6 +132,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_ac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputTxt.setText("");
+                outPuttxt.setText("");
+            }
+        });
+
         btn_dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
