@@ -2,10 +2,14 @@ package com.example.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.security.PrivateKey;
+
 
 public class MainActivity extends AppCompatActivity {
     ImageView btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0;
@@ -179,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 inputTxt.setText(data + "×");
             }
         });
+
         btn_equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -187,6 +192,9 @@ public class MainActivity extends AppCompatActivity {
                 data=data.replaceAll("×","*");
                 data=data.replaceAll("%","/100");
                 data=data.replaceAll("÷","/");
+
+                Context rhino=Context.enter();
+                rhino.setOptimizationLevel(-1);
 
 
 
